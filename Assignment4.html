@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>
+			Count vowels of a given string
+		</title>
+		<h1>Vowels Count</h1>
+		<script src ="myScript.js"></script>
+	</head>
+<body>
+	<table>
+		<tr>
+			<td>
+			Input
+			</td> 
+			<td><input type="text" id="t1" name=""></td>
+		</tr> 
+		<tr>
+			<td><input type="button" value="Click" onclick="countString()"</td>
+			
+		</tr>
+	</table>
+	<p id="p1"></p>
+	
+<script type = "text/javascript">
+function countString() {
+var str = document.getElementById("t1").value;
+
+var vowel="aeiouAEIOU";
+var ctr=0;
+for(var x=0;x<str.length;x++){
+	for(var y=0;y<vowel.length;y++)
+	{
+	if(str[x]==vowel[y])
+		{
+			ctr++;
+		}
+	}
+	}
+	document.getElementById("p1").innerHTML = "The number of vowel in Textbox is"+ctr;
+}
+</script>
+</body>
+</html>
